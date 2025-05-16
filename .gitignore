@@ -29,7 +29,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
+__pycache__
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
