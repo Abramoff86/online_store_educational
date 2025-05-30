@@ -12,6 +12,8 @@ from app.models.user import User
 from app.schemas import CreateUser
 from app.backend.db_depends import get_db
 
+from config import SECRET_KEY, ALGORITHM
+
 
 
 router = APIRouter(prefix='/auth', tags=['auth'])
@@ -19,9 +21,6 @@ bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 
-
-SECRET_KEY = 'a21679097c1ba42e9bd06eea239cdc5bf19b249e87698625cba5e3572f005544' #это обязательно спрятать тут для примера
-ALGORITHM = 'HS256'
 
 
 async def create_access_token(username: str, user_id: int, is_admin: bool, is_supplier: bool, is_customer: bool,

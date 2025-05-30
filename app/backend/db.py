@@ -1,13 +1,10 @@
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 from sqlalchemy.orm import DeclarativeBase
 
+from config import DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME
 
 
-DB_HOST = 'localhost'
-DB_PORT = '5433'
-DB_NAME = 'ecommerce'
-DB_USER = 'ecommerce'
-DB_PASSWORD = 'xxxxx' #указать свое и спрятать, тут просто для примера
+
 
 SQLALCHEMY_DATABASE_URL = f"postgresql+asyncpg://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=True)

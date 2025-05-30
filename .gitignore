@@ -1,0 +1,8 @@
+.venv
+.idea
+config.py
+info.log
+pip.txt
+alembic.ini
+ __pycache__
+ migrations
