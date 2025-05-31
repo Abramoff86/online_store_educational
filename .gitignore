@@ -4,5 +4,9 @@ config.py
 info.log
 pip.txt
 alembic.ini
- __pycache__
- migrations
+app/__pycache__/
+app/backend/__pycache__/
+app/migrations/
+app/models/__pycache__/
+app/routers/__pycache__/
+migrations
